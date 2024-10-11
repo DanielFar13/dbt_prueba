@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: pos
+  - name: customer
     database: tb_101
     schema: raw_customer
     tables:
