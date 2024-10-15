@@ -8,6 +8,7 @@ l1_product AS (
         PRODUCT_NAME,
         PRODUCT_CATEGORY, 
         PRODUCT_SUBCATEGORY,
+        TRUCK_BRAND_NAME,
         MENU_TYPE_ID
     FROM stg_menu
 )
