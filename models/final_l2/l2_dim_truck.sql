@@ -1,6 +1,6 @@
 WITH PRODUCT_UNIQUE AS (
     SELECT DISTINCT MENU_TYPE_ID, TRUCK_BRAND_NAME
-    FROM l1_product
+    FROM {{ ref('l1_product') }}
 ),
 l2_dim_truck AS (
     SELECT
@@ -9,7 +9,7 @@ l2_dim_truck AS (
         TRUCK.CAR_BRAND, 
         TRUCK.MODEL,
         TRUCK.YEAR
-    FROM l1_truck TRUCK
+    FROM {{ ref('l1_truck') }} TRUCK
     LEFT JOIN PRODUCT_UNIQUE PRODUCT 
     ON PRODUCT.MENU_TYPE_ID = TRUCK.MENU_TYPE_ID
 )

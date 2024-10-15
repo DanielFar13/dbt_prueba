@@ -3,4 +3,4 @@ SELECT
 	PRODUCT_NAME,
 	PRODUCT_CATEGORY,
 	PRODUCT_SUBCATEGORY
-FROM l1_product
+FROM {{ ref('l1_product') }}
