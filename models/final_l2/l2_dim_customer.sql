@@ -7,4 +7,4 @@ SELECT
     OWNER_CITY,
     GENDER,
     EMAIL
-FROM l1_customer
+FROM {{ ref('l1_customer') }}
